@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agenda</title>
+    <link rel="stylesheet" href="Agenda.css">
+    <link rel="stylesheet" href="vanilla-calendar-min.css">
+    <script src="vanilla-calendar-min.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body class="bodyAgenda">
+    <h1 class="hAgenda">Mi Agenda</h1>
+
+    <main class="mainAgenda">
+      <section id="myCalendar" class="vanilla-calendar"></section>
+
+      <section class="agenda">
+        <h3 id="tacheTitle" class="heading hAgenda"></h3>
+        <div id="tacheList"></div>
+      </section>
+
+      <section>
+        <form action="" id="formulaire" class="formAgenda cardAgenda">
+          <h3 class="heading hAgenda">Agregar una tarea</h3>
+          <div class="field">
+            <label for="tache" class="labelAgenda">Tarea</label>
+            <input
+              class="inputAgenda"
+              type="text"
+              name="tache"
+              id="tache"
+              placeholder="Nombre de la tarea"
+            />
+          </div>
+          <div class="field">
+            <label for="description" class="labelAgenda">Descripcion</label>
+            <textarea
+              class="textareaAgenda"
+              name="description"
+              id="description"
+              cols="30"
+              rows="10"
+              placeholder="Descripcion"
+            ></textarea>
+          </div>
+          <div class="field">
+            <label for="heure" class="labelAgenda">Horario</label>
+            <input class="inputAgenda" type="time" name="heure" id="heure" />
+          </div>
+          <div class="field">
+            <label class="labelAgenda" for="duree" class="label">Duración (ej: 45 minutos)</label>
+
+            <input
+              class="inputAgenda"
+              type="text"
+              name="duree"
+              id="duree"
+              placeholder="Duración (ej: 45 minutos)"
+            />
+          </div>
+          <div class="field">
+            <button class="buttonFormAgenda" type="submit">Agregar</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

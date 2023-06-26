@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login</title>
+		<link rel="stylesheet" href="Index.css">
+		<script>
+			function show() {
+				var p = document.getElementById('pwd');
+				p.setAttribute('type', 'text');
+			}
+			function hide() {
+				var p = document.getElementById('pwd');
+				p.setAttribute('type', 'password');
+			}
+			var pwShown = 0;
+			document.getElementById("eye").addEventListener("click", function () {
+			if (pwShown == 0) {
+				pwShown = 1;
+				show();
+			} else {
+				pwShown = 0;
+				hide();
+				}
+			}, false);
+		</script>
+		</head>
+	<body>
+		<div class="overlay">
+			<!-- LOGN IN FORM -->
+			<form>
+				<!--   con = Contenerdor para los elementos del formulario -->
+				<div class="con">
+					<!--     Inicio del contenido del header -->
+					<header class="head-form">
+						<h2>Login</h2>
+						<!-- Mensaje de bienvenida o instructivo del formulario -->
+						<p>Ingresar utilizando su usuario y contraseña...</p>
+					</header>
+					<!--     Fin del header  -->
+					<br>
+					<div class="field-set">
+						<!--   nombre de usuario -->
+						<span class="input-item">
+							<i class="fa fa-user-circle"></i>
+						</span>
+						<!--   entrada del nombre -->
+						<input class="form-input" id="txt-input" type="text" placeholder="@NombreUsuario" required>
+						<br>
+						<!--   Contraseña -->
+						<span class="input-item">
+							<i class="fa fa-key"></i>
+						</span>
+						<!--   entrada de la contraseña -->
+						<input class="form-input" type="password" placeholder="Contrase&ntilde;a" id="pwd"  name="password" required>
+						<!--      Mostrar/ocultar contraseña  -->
+						<span>
+							<i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"></i>
+						</span>
+						<br>
+						<!--        botones  -->
+						<!--      button de ingreso -->
+						<a href="Agenda.html">
+			<button class="next" type="button" value="Ingresar">Ingresar</button>
+             </a>
+					</div>
+					<!--   otros botones -->
+					<div class="other">
+						<!--     Botón de crear usuario -->
+						<a href="Sing up.html">
+						<button class="btn submits sign-up" type="button" value="NuevoUsuario">Crear nuevo usuario </button>
+						 </a>
+						<!--      Fin del la división  -->
+					</div>
+					<!--   Fin del contenedor   -->
+				</div>
+				<!-- Fin del formulario -->
+			</form>
+		</div>
+	</body>
+</html>
+
